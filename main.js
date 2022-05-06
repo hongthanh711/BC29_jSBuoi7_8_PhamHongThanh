@@ -74,3 +74,96 @@ getEle("btn-tim").onclick = function () {
   // Show kq
   getEle("ketqua-3").innerHTML = "Số nhỏ nhất là: " + min;
 };
+
+// 4
+/**
+ * Input: Array
+ * Process:
+ * Tạo thêm 1 mảng mới dùng để chứa các số dương
+    Dùng vòng lặp để lấy các số dương từ mảng cũ và lưu vào trong mảng mới
+    Kiểm tra mảng mới có phần tử hay không. Nếu có thì bắt đầu đi tìm giá trị dương nhỏ nhất. Ngược lại thì thông báo không có số dương
+ * Output: Number. Nhỏ nhất
+ */
+
+getEle("btn-timSoDuong").onclick = function () {
+  var arrNumberDuong = [];
+  var mark = 0;
+  var result = "";
+
+  for (var i = 0; i < arrNumber.length; i++) {
+    if (arrNumber[i] > 0) {
+      arrNumberDuong.push(arrNumber[i]);
+      mark = 1;
+    }
+    if (mark === 1) {
+      min = arrNumberDuong[0];
+      for (var j = 1; j < arrNumberDuong.length; j++) {
+        if (arrNumberDuong[j] < min) {
+          min = arrNumberDuong[j];
+        }
+      }
+      result = "Số dương nhỏ nhất là: " + min;
+    } else {
+      result = "Không có số dương nào trong mảng";
+    }
+  }
+
+  // Show kq
+  getEle("ketqua-4").innerHTML = result;
+};
+
+// 5
+// Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì trả về -1
+/**
+ * Input: Array
+ * Process:
+ * - Thêm số chẵn vào mảng mới
+ * - Có số chẵn
+ *  + In ra số cuối cùng (length -1)
+ * - Else: In ra không có số chẵn
+ * Output: Number. Số chẵn cuối cùng trong mảng
+ */
+
+getEle("btn-timSoChan").onclick = function () {
+  var arrNumberChan = [];
+  var mark = -1;
+  var result = "";
+
+  for (var i = 0; i < arrNumber.length; i++) {
+    if (arrNumber[i] % 2 === 0) {
+      arrNumberChan.push(arrNumber[i]);
+      mark = 1;
+    }
+    if (mark === 1) {
+      result =
+        "Số chẵn cuối cùng trong mảng là: " +
+        arrNumberChan[arrNumberChan.length - 1];
+    } else {
+      result = "Không có số chẵn nào trong mảng";
+    }
+  }
+
+  // Show kq
+  getEle("ketqua-5").innerHTML = result;
+};
+
+// 6
+// Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ giá trị).
+
+/**
+ * Input: Array
+ *    Vị trí 1
+ *    Vị trí 2
+ * Process:
+ *  Tạo 1 biến trung gian
+ *  Truyền giá trị qua trung gian
+ * Output: Array mới
+ */
+
+getEle("btn-doiCho").onclick = function () {
+  var temp = 0;
+  var result = "";
+
+  var viTri1 = getEle("viTri1").value * 1;
+  var viTri2 = getEle("viTri2").value * 1;
+};
