@@ -166,4 +166,142 @@ getEle("btn-doiCho").onclick = function () {
 
   var viTri1 = getEle("viTri1").value * 1;
   var viTri2 = getEle("viTri2").value * 1;
+
+  temp = arrNumber[viTri1];
+  arrNumber[viTri1] = arrNumber[viTri2];
+  arrNumber[viTri2] = temp;
+
+  result = "[" + arrNumber.toString() + "]";
+
+  // Show kq
+  getEle("ketqua-6").innerHTML = result;
+};
+
+// 7
+// Sắp xếp mảng theo thứ tự tăng dần
+
+/**
+ * Input: Array
+ * Process:
+ *
+ */
+
+// 8
+// Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về – 1
+
+/**
+ * Input: Array
+ * Process:
+ * - Khởi tạo giá trị lính canh
+ * - Lấy giá trị trong mảng
+ * - Kiểm tra có phải số nguyên tố ko
+ * - Nếu có thay đổi giá trị lính canh và thoát khỏi vòng lặp
+ * Output: In ra số nguyên tố đầu tiên hoặc không có số nguyên tố nào
+ */
+
+getEle("btn-timSoNguyenTo").onclick = function () {
+  var mark = -1;
+  var result = "";
+
+  for (var i = 0; i < arrNumber.length; i++) {
+    for (var j = 2; j < Math.sqrt(arrNumber[i]); j++) {
+      if (arrNumber[i] % j === 0) {
+        mark = i;
+        break;
+      }
+    }
+  }
+
+  if (mark !== -1) {
+    result = "Số nguyên tố đầu tiên là" + arrNumber[mark];
+  } else {
+    result = -1;
+  }
+
+  // Show kq
+  getEle("ketqua-8").innerHTML = result;
+};
+
+// 9
+// Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên.
+
+/**
+ * Thêm mảng
+ */
+// Khai báo mảng
+var arrNumber9 = [];
+
+// Thêm phần tử vào mảng
+getEle("btn-themSo9").onclick = function () {
+  var number = getEle("soN9").value * 1;
+  arrNumber9.push(number);
+
+  // In mảng ra màn hình
+  getEle("mang-9").innerHTML = "[" + arrNumber9.toString() + "]";
+};
+
+/**
+ * Đếm số nguyên
+ */
+
+getEle("btn-demSoNguyen").onclick = function () {
+  var sum = "";
+  var result = "";
+  var mark = -1;
+
+  for (var i = 0; i < arrNumber9.length; i++) {
+    if (Number.isInteger(arrNumber9[i])) {
+      sum += arrNumber9[i] + ", ";
+      mark = 1;
+    }
+  }
+
+  if (mark === 1) {
+    result = "Các số nguyên là: " + sum;
+  } else {
+    result = "Không có số nguyên nào trong mảng";
+  }
+  // Show kq
+  getEle("ketqua-9").innerHTML = result;
+};
+
+// 10
+// So sánh số lượng số dương và số lượng số âm
+
+/**
+ * Input: Array arrNumber
+ * Process:
+ * Duyệt mảng : Nếu dương cộng vào count dương
+ *              Nếu âm cộng vào count âm
+ * So sánh 2 count
+ * Output: Kết quả so sánh
+ */
+
+getEle("btn-soSanh").onclick = function () {
+  var countDuong = 0;
+  var countAm = 0;
+  var result = "";
+
+  // Đếm số lượng
+  for (var i = 0; i < arrNumber.length; i++) {
+    if (arrNumber[i] >= 0) {
+      countDuong++;
+    } else {
+      countAm++;
+    }
+  }
+
+  // So sánh
+  if (countDuong > countAm) {
+    result = "Số lượng số dương nhiều hơn số lượng số âm";
+  }
+  if (countDuong > countAm) {
+  } else if (countDuong < countAm) {
+    result = "Số lượng số âm nhiều hơn số lượng số dương";
+  } else {
+    result = "Số lượng số âm bằng số lượng số dương";
+  }
+
+  // Show kq
+  getEle("ketqua-10").innerHTML = result;
 };
