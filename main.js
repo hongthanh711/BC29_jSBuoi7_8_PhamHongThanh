@@ -142,6 +142,9 @@ getEle("btn-timSoChan").onclick = function () {
       result = "Không có số chẵn nào trong mảng";
     }
   }
+  if (arrNumber.length === 0) {
+    result = "Không có số chẵn nào trong mảng";
+  }
 
   // Show kq
   getEle("ketqua-5").innerHTML = result;
@@ -180,11 +183,9 @@ getEle("btn-doiCho").onclick = function () {
 // 7
 // Sắp xếp mảng theo thứ tự tăng dần
 
-/**
- * Input: Array
- * Process:
- *
- */
+// var arrNumber7 = arrNumber;
+// arrNumber7.sort(compareNumbers);
+// console.log(arrNumber7);
 
 // 8
 // Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về – 1
@@ -204,20 +205,22 @@ getEle("btn-timSoNguyenTo").onclick = function () {
   var result = "";
 
   for (var i = 0; i < arrNumber.length; i++) {
-    for (var j = 2; j < Math.sqrt(arrNumber[i]); j++) {
+    mark = -1;
+    for (var j = 2; j <= Math.sqrt(arrNumber[i]); j++) {
       if (arrNumber[i] % j === 0) {
-        mark = i;
+        mark = 1;
         break;
       }
     }
+    if (mark === -1) {
+      result = "Số nguyên tố đầu tiên là: " + arrNumber[i];
+      break;
+    }
   }
 
-  if (mark !== -1) {
-    result = "Số nguyên tố đầu tiên là" + arrNumber[mark];
-  } else {
-    result = -1;
+  if (mark !== -1 || arrNumber.length === 0) {
+    result = "Không có số nguyên tố nào trong mảng";
   }
-
   // Show kq
   getEle("ketqua-8").innerHTML = result;
 };
@@ -294,8 +297,6 @@ getEle("btn-soSanh").onclick = function () {
   // So sánh
   if (countDuong > countAm) {
     result = "Số lượng số dương nhiều hơn số lượng số âm";
-  }
-  if (countDuong > countAm) {
   } else if (countDuong < countAm) {
     result = "Số lượng số âm nhiều hơn số lượng số dương";
   } else {
