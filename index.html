@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8" />
 	<title>JS Buổi 7</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<!-- MATERIAL DESIGN ICONIC FONT -->
 	<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" />
@@ -34,166 +39,238 @@
 		</div>
 	</div>
 
-	<!-- 1 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>1. Tổng số dương</h4>
-			<button id="btn-tinhTong">
-				Tính tổng
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-1"></div>
+
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#bai1">Bài 1</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai2">Bài 2</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai3">Bài 3</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai4">Bài 4</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai5">Bài 5</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai6">Bài 6</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai7">Bài 7</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai8">Bài 8</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai9">Bài 9</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#bai10">Bài 10</a>
+		</li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div class="tab-pane container active" id="bai1">
+			<!-- 1 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>1. Tổng số dương</h4>
+					<button id="btn-tinhTong">
+						Tính tổng
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-1"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai2">
+			<!-- 2 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>2. Đếm có tổng bao nhiêu số dương trong mảng</h4>
+					<button id="btn-dem">
+						Đếm
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-2"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai3">
+			<!-- 3 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>3. Tìm số nhỏ nhất trong mảng</h4>
+					<button id="btn-tim">
+						Tìm
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-3"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai4">
+			<!-- 4 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>4. Tìm số dương nhỏ nhất trong mảng</h4>
+					<button id="btn-timSoDuong">
+						Tìm
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-4"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai5">
+			<!-- 5 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>5. Tìm số chẵn cuối cùng trong mảng. <br> Nếu mảng không có giá trị chẵn trả về -1</h4>
+					<button id="btn-timSoChan">
+						Tìm số chẵn
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-5"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai6">
+			<!-- 6 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>6. Đổi chỗ 2 giá trị trong mảng theo vị trí</h4>
+					<label class="form-group">
+						<input id="viTri1" type="text" class="form-control" required />
+						<span for="">Vị trí 1</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input id="viTri2" type="text" class="form-control" required />
+						<span for="">Vị trí 2</span>
+						<span class="border"></span>
+					</label>
+					<button id="btn-doiCho">
+						Đổi chỗ
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-6"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai7">
+			<!-- 7 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>7. Sắp xếp mảng theo thứ tự tăng dần</h4>
+					<button id="btn-xapSep">
+						Sắp xếp
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-7"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai8">
+			<!-- 8 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>8. Tìm số nguyên tố đầu tiên trong mảng <br> Nếu mảng không có số nguyên tố thì trả về giá trị
+						-1</h4>
+					<button id="btn-timSoNguyenTo">
+						Tìm số nguyên tố đầu tiên
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-8"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai9">
+			<!-- 9 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>9. Nhập thêm 1 mảng số thực <br>
+						Đếm số nguyên</h4>
+					<label class="form-group">
+						<input id="soN9" type="text" class="form-control" required />
+						<span for="">Số n</span>
+						<span class="border"></span>
+					</label>
+					<button id="btn-themSo9">
+						Thêm số
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<div class="ketQua" id="mang-9"></div>
+					<button id="btn-demSoNguyen">
+						Đếm số nguyên
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-9"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane container fade" id="bai10">
+			<!-- 10 -->
+			<div class="wrapper">
+				<div class="inner">
+					<!-- <form action=""> -->
+					<h4>10. So sánh số lượng số dương và số lượng số âm</h4>
+					<button id="btn-soSanh">
+						So sánh
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<!-- </form> -->
+					<div class="ketQua" id="ketqua-10"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<!-- 2 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>2. Đếm có tổng bao nhiêu số dương trong mảng</h4>
-			<button id="btn-dem">
-				Đếm
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-2"></div>
-		</div>
-	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 
-	<!-- 3 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>3. Tìm số nhỏ nhất trong mảng</h4>
-			<button id="btn-tim">
-				Tìm
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-3"></div>
-		</div>
-	</div>
 
-	<!-- 4 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>4. Tìm số dương nhỏ nhất trong mảng</h4>
-			<button id="btn-timSoDuong">
-				Tìm
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-4"></div>
-		</div>
-	</div>
-
-	<!-- 5 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>5. Tìm số chẵn cuối cùng trong mảng. <br> Nếu mảng không có giá trị chẵn trả về -1</h4>
-			<button id="btn-timSoChan">
-				Tìm số chẵn
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-5"></div>
-		</div>
-	</div>
-
-	<!-- 6 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>6. Đổi chỗ 2 giá trị trong mảng theo vị trí</h4>
-			<label class="form-group">
-				<input id="viTri1" type="text" class="form-control" required />
-				<span for="">Vị trí 1</span>
-				<span class="border"></span>
-			</label>
-			<label class="form-group">
-				<input id="viTri2" type="text" class="form-control" required />
-				<span for="">Vị trí 2</span>
-				<span class="border"></span>
-			</label>
-			<button id="btn-doiCho">
-				Đổi chỗ
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-6"></div>
-		</div>
-	</div>
-
-	<!-- 7 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>7. Sắp xếp mảng theo thứ tự tăng dần</h4>
-			<button id="btn-xapSep">
-				Sắp xếp
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-7"></div>
-		</div>
-	</div>
-
-	<!-- 8 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>8. Tìm số nguyên tố đầu tiên trong mảng <br> Nếu mảng không có số nguyên tố thì trả về giá trị -1</h4>
-			<button id="btn-timSoNguyenTo">
-				Tìm số nguyên tố đầu tiên
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-8"></div>
-		</div>
-	</div>
-
-	<!-- 9 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>9. Nhập thêm 1 mảng số thực <br>
-				Đếm số nguyên</h4>
-			<label class="form-group">
-				<input id="soN9" type="text" class="form-control" required />
-				<span for="">Số n</span>
-				<span class="border"></span>
-			</label>
-			<button id="btn-themSo9">
-				Thêm số
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<div class="ketQua" id="mang-9"></div>
-			<button id="btn-demSoNguyen">
-				Đếm số nguyên
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-9"></div>
-		</div>
-	</div>
-
-	<!-- 10 -->
-	<div class="wrapper">
-		<div class="inner">
-			<!-- <form action=""> -->
-			<h4>10. So sánh số lượng số dương và số lượng số âm</h4>
-			<button id="btn-soSanh">
-				So sánh
-				<i class="zmdi zmdi-arrow-right"></i>
-			</button>
-			<!-- </form> -->
-			<div class="ketQua" id="ketqua-10"></div>
-		</div>
-	</div>
 	<script src="./main.js"></script>
 </body>
 
